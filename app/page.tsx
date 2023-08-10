@@ -1,6 +1,6 @@
 'use client';
 
-import FormSection from '@/components/forms/FormSection';
+import FormSection from '@/components/sections/FormSection';
 
 export default function Home() {
   return (

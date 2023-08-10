@@ -1,10 +1,9 @@
 import { useForm } from 'react-hook-form';
-import validator from 'validator';
-import FormInputName from './FormInputName';
-import FormInputCountry from './FormInputCountry';
-import FormInputEmail from './FormInputEmail';
-import FormInputPhone from './FormInputPhone';
-import FormInputMessage from './FormInputMessage';
+import FormInputName from '../forms/FormInputName';
+import FormInputCountry from '../forms/FormInputCountry';
+import FormInputEmail from '../forms/FormInputEmail';
+import FormInputPhone from '../forms/FormInputPhone';
+import FormInputMessage from '../forms/FormInputMessage';
 
 export default function FormSection() {
   const {
@@ -13,24 +12,17 @@ export default function FormSection() {
     formState: { errors },
   } = useForm();
 
-  const { getNames } = require('country-list');
-
-  const countries = getNames();
-
   const saveData = (data: any) => {
     const form = document.getElementById('Form') as HTMLFormElement;
     form?.reset();
     console.log(data);
   };
 
-  console.log('Errors: ', errors);
-
   return (
     <form id="Form">
       <div className=" flex flex-col gap-4">
-        
         <FormInputName register={register} errors={errors} />
-        <FormInputCountry register={register} errors={errors} countries={countries}/>
+        <FormInputCountry register={register} errors={errors} />
         <FormInputEmail register={register} errors={errors} />
         <FormInputPhone register={register} errors={errors} />
         <FormInputMessage register={register} errors={errors} />
