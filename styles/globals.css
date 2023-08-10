@@ -3,4 +3,14 @@
 @tailwind utilities;
 
 body {
+  overflow-x: hidden;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: small;
 }

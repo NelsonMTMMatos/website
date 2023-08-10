@@ -1,6 +1,6 @@
 'use client';
 
-import FormEmailInput from '@/components/forms/FormEmailInput';
+import FormSection from '@/components/forms/FormSection';
 import Header from '@/components/layout/Header';
 
 export default function Home() {
@@ -9,10 +9,10 @@ export default function Home() {
       <header>
         <Header />
       </header>
-      <div className=" flex justify-between items-center container">
+      <div className=" flex justify-between items-center container mt-20 mb-20">
         <img src="./images/image.png" alt="No image" />
-        <div className=" w-full h-full  px-10">
-          <FormEmailInput />
+        <div className=" w-full h-full px-10">
+          <FormSection />
         </div>
       </div>
     </main>
